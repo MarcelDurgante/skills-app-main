@@ -131,12 +131,3 @@ function updateNavbar() {
     navbar.appendChild(adminLink);
   }
 }
-
-// useless intentional addition to create terrible performance so we can inspect code using the Performance tab 
-let list =[];
-for(let i = 0; i < 10000000; i++) {
-    list[i] = Math.sqrt(i);
-}
-// end of useless addition     
-
-// Result of the code above is that over inspection in the Memory tab we can take a Heap Snapshot and confirm that it increased the size of the snapshot from 44 MB to 164 MB
