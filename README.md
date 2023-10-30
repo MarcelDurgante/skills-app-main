@@ -11,3 +11,11 @@
  - Debugging JavaScript in the browser
  - Chrome DevTools
  - Different parts of Chrome DevTools 
+    ### Panels (Chrome DevTools)
+    - Elements
+    - Console
+    - Sources
+    - Network
+    - Performance
+    - Memory 
+    - Application
