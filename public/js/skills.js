@@ -54,7 +54,8 @@ function handlePage(currentUser) {
 
         addSkillForm.addEventListener("submit", (event) => {
             event.preventDefault();
-            addSkill(currentUser);
+            // intentional addSkills instead of addSkill to demo console
+            addSkills(currentUser);
         });
     }
 }
@@ -62,7 +63,7 @@ function handlePage(currentUser) {
 function addSkill() {
 
     const messageDiv = document.getElementById("message");
-    const skillName = document.getElementById("skill-name").value;
+    const skillName = document.getElementById("skill-name"); // .value; - intentional error to debug demo 
 
     fetch("/api/user/skills", {
         method: "POST",
