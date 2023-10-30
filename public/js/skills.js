@@ -131,3 +131,10 @@ function updateNavbar() {
     navbar.appendChild(adminLink);
   }
 }
+
+// useless intentional addition to create terrible performance so we can inspect code using the Performance tab 
+let list =[];
+for(let i = 0; i < 10000000; i++) {
+    list[i] = Math.sqrt(i);
+}
+// end of useless addition        
