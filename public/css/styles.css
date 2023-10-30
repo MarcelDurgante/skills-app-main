@@ -1,12 +1,12 @@
 /* Primary colors */
 :root {
-    --primary-light: #FF1675;
-    --primary-dark: #130F25;
-    /* Secondary colors */
-    --secondary-blue: #00A3FF;
-    --secondary-purple: #770EF7;
-    --secondary-yellow: #FFC942;
-    --secondary-orange: #FF7B01;
+  --primary-light: #FF1675;
+  --primary-dark: #130F25;
+  /* Secondary colors */
+  --secondary-blue: #00A3FF;
+  --secondary-purple: #770EF7;
+  --secondary-yellow: #FFC942;
+  --secondary-orange: #FF7B01;
 }
 
 body {
@@ -62,8 +62,8 @@ a:hover {
 }
 
 form {
-    background-color: var(--primary-dark);
-    border-radius: 5px;
+  background-color: var(--primary-dark);
+  border-radius: 5px;
 }
 
 section {
@@ -101,7 +101,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: var(--secondary-purple);
+  background-color: var(--secondary-purple);
 }
 
 /* NavBar styling */
@@ -154,11 +154,8 @@ hr {
     margin: 2%;
 }
 
-// add intentional error for debugging purposes using the DevTools console
-#message {
-    display: none;
-}
+/* add intentional error for debugging purposes using the DevTools console */
 
-footer {
-    color: black !important
+#message {
+  display: none;
 }
