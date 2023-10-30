@@ -153,3 +153,12 @@ hr {
     background-color: #FF1675;
     margin: 2%;
 }
+
+// add intentional error for debugging purposes using the DevTools console
+#message {
+    display: none;
+}
+
+footer {
+    color: black !important
+}
