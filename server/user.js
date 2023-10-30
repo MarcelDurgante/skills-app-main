@@ -35,7 +35,7 @@ userRouter.get('/skills', function (req, res) {
 });
 
 // Add a skill to the logged-in user
-userRouter.post('/skills', function (req, res) {
+userRouter.post('/skills', function (req, res) { // the correct endpoint is /skills not skill as we have now
     const { skill } = req.body;
     data.addSkill(req.session.userId, skill);
     res.json({ status: 'success', message: 'Skill added successfully' });
