@@ -1,4 +1,4 @@
-# Debugging JavsScript Applications
+# [Debugging JavsScript Applications](https://app.pluralsight.com/library/courses/javascript-debugging-applications/table-of-contents)
 
 ## Debugging the backend
  - Get VS Code ready for debugging
