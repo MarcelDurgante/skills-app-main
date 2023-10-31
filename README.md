@@ -26,6 +26,10 @@
 ## Finding common bugs
 
  - Reference and type errors 
+   * Reference errors
+    * Using an identifier that has not  been defined
+   * Type errors 
+    * Performing an operation that is not available on a certain type. When we misuse a data type.
  - Logical problems
  - Undefined behaviour
  - Browser compatibility
@@ -34,3 +38,9 @@
  - Failed imports
  - Problems with UI events
  - Callbacks, promises, and async/await issues
+
+ ### Fixing a type error
+
+ - Approach for solving
+  * Checking the console
+  * Solving the problem
