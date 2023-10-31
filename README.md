@@ -44,3 +44,9 @@
  - Approach for solving
     * Checking the console
     * Solving the problem
+
+### Logical error
+
+ - Approach for solving
+    * Setting breakpoints in the Sources panel of Chrome DevTools
+    * And then, inspecting the code's flow and state at each step
