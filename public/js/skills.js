@@ -112,7 +112,7 @@ function renderSkillListPage() {
           listItem.id = skill;
           const deleteBtn = document.createElement("button");
           deleteBtn.innerHTML = "Delete";
-          deleteBtn.addEventListener("click", deleteSkill); // IMPORTANT NOTE:  it's also possible that you, for example, misspelled the ID or that to actually execute the function when you assign it ( deleteBtn.addEventListener("click", deleteSkill()). So now you might think that I'm assigning the deleteSkill function to the onclick, but I'm actually specifying the return result of deleteSkill. So what happens when I call deleteSkill? That should be defined or to click, and that is undefined because the deleteSkill does not returning anything. So make sure that you don't need parentheses in the back. And if you do need them in order to set, for example, some parameters in, make sure that you put it inside an arrow function so that you can actually not trigger the function upon assigning it as an event listener because that's not working, like so: deleteBtn.addEventListener("click", () => deleteSkill(9)).
+          deleteBtn.addEventListener("click", deleteSkill); 
           listItem.appendChild(deleteBtn);
           skillsList.appendChild(listItem);
         });
