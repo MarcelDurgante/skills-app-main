@@ -129,8 +129,6 @@ function renderSkillListPage() {
 function updateNavbar() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
   const navbar = document.getElementById("navbar");
-// intentional error || instead of &&
-// See summary of the error below
   if (user && user.isAdmin) {
     const adminLink = document.createElement("a");
     adminLink.href = "admin.html"; // Set the correct link to your admin page
@@ -145,24 +143,26 @@ function deleteSkill(e) {
     // NOTE: not deleting it on the backend yet 
 }
 
-// Summary of the error:
+// Summary of the debugging Undefined behaviour
 
 /* output: 
 
-We're going to log in as a regular user so we don't have any admin rights. But we see a problem occur. The admin page is showing up in the navbar. And even worse, I can even navigate there. As you can see, in our console, there's no error showing up. 
+This time, we start in the Elements panel because we want to see if any event listeners are attached. We have the Sources panel as a backup plan, and we end up fixing our code. 
 
-So instead, we're going to move to our Sources tab. What you can also see is the admin page is not visible here. So I'm going to go back to My Skills, and this is where the admin page is visible. I'm going to be opening up the JavaScript, and I'm going to set a breakpoint at the function that should be showing or hiding the element in the navbar.  
+We try to add a Delete button to every skill. Let's log in as user1 again. And as you can see, every skill now has a Delete button. But when I click it, nothing is happening. So the first step would be to check out the Elements tab. 
 
-So, let's refresh this page and see if we even get stuck on this line, and we do. So we can now go ahead and inspect what's going on. So we have our local scope right here, and I'm going to step over to the next line. As you can see, in the user, it now stored our values. So let's go ahead and see what's going on inside the user. And as you can see, isAdmin is set to false. Clearly, normally, you would not have your password right here, but this just returned the full user object and we stored it in our local storage for demonstration purposes. But as you can see, isAdmin is false, so that's not a problem. 
+I'm going to select one of the buttons, and I'm going to navigate to the event listeners tab. And as you can see, nothing seems to be connected here. So that's already a really good clue that this is not working. 
 
-Okay, so let's go ahead and let's move to the next step. 
+Sometimes, however, it can be a bit vague to see what's really going on. And now we still have the Sources tab as a backup. So in here, at the very bottom, we have a deleteSkill function. So I'm going put a breakpoint on here, click those buttons, and as I can see, nothing is happening. So that should be a clue. We should have a look at where I added that event handler. 
 
-We select the navbar. So this if statement should be false because in this if statement, we are appending the admin page. 
+Where did we add that event handler? Well, it turns out we didn't. 
 
-Once we step over, we can actually see we end up inside this if statement. So this is where it's going wrong. 
+So, let's make sure that we add the event handler to the click so that now the Delete button is actually connected to the deleteSkill function. 
 
-Inside this if statement, the logic is a problem. And indeed it is because we're saying if the user or user is admin. So user is going to make it a truthy object because it's not undefined or null or something. There's actually a user object in there set to true. So, true or false comes down to true, and that's a problem. Those should be ampersands and not the pipes.
+And then now when we refresh, you can see that we can actually end up in this function. And if you step through it (using the step over button of the inspector debugger of the DevsTool), the elements get deleted. 
 
-Upon correction we move back to the browser and render the page again. As you can see, again, we get stuck on this endpoint. But this time, we actually don't get into the if statement, and the admin page is not showing up in the navbar.
+So let me repeat without a breakpoint. When I click on this, you can see it gets deleted.
+
+So what's not implemented yet is that it's also deleted on the back end. So when I refresh it again, all my skills are back. 
 
 */
