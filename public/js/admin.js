@@ -12,7 +12,7 @@ admin.js:61 Error: TypeError: userSelect.appendChild is not a function
     at admin.js:48:24
     
     */
-    const userSelect = document.getElementById('user-select').value;
+    const userSelect = document.getElementById('user-select'); // we are not allowed to call appendChild on this for example. Also we are not allowed to call addEventListener. Why? Bacause the .value attribute, if we remove it we have an HTML object again, and now we can call addEventListener and appendChild again. After removing, in Admin Page we can see the list of users in Sill Management/Select User: 
     const newUserForm = document.getElementById('user-form');
     const newSkillForm = document.getElementById('skill-form');
 
@@ -20,7 +20,7 @@ admin.js:61 Error: TypeError: userSelect.appendChild is not a function
 
 
     // Fetch skills of the selected user and populate the skills list
-    userSelect.addEventListener('change', (event) => {
+    userSelect.addEventListener('change', (event) => { // we can see the other type error. And we call the populateUserList on line 7 -> populateUserList(userSelect) - So...
         const userId = event.target.value;
         renderSkillsForUser(userId, userSelect);
     });
@@ -30,7 +30,7 @@ admin.js:61 Error: TypeError: userSelect.appendChild is not a function
         // Prevent the form from submitting normally
         event.preventDefault();
         addUser();
-        populateUserList(userSelect);
+        populateUserList(userSelect); // So it is likely that sth went wrong in line 3 -> const userSelect = document.getElementById('user-select').value;
 
     });
 
@@ -42,7 +42,7 @@ admin.js:61 Error: TypeError: userSelect.appendChild is not a function
     });
 });
 
-function populateUserList(userSelect) {
+function populateUserList(userSelect) {  // we can see the userSelect was passed into the populateUserList function. So when we scroll to line 11 (as informed in the console ( userSelect.addEventListener(....) ....)) ...
     const usersList = document.getElementById('users-list');
 
     // Fetch users and populate the users list and user select
@@ -67,7 +67,7 @@ function populateUserList(userSelect) {
                 const option = document.createElement('option');
                 option.value = user.id;
                 option.text = user.username;
-                userSelect.appendChild(option);
+                userSelect.appendChild(option);  //  error message: userSelect.appendChild gave a type error. If we scroll a bit to function populateUserList ...
             });
         })
         .catch((error) => console.error('Error:', error));
