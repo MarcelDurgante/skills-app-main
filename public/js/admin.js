@@ -1,5 +1,17 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     // intentional error .value to cause type error later on
+
+    /* output: The error message in the console.
+    
+    admin.js:11 Uncaught TypeError: userSelect.addEventListener is not a function
+    at HTMLDocument.<anonymous> (admin.js:11:16)
+(anonymous) @ admin.js:11
+admin.js:61 Error: TypeError: userSelect.appendChild is not a function
+    at admin.js:58:28
+    at Array.forEach (<anonymous>)
+    at admin.js:48:24
+    
+    */
     const userSelect = document.getElementById('user-select').value;
     const newUserForm = document.getElementById('user-form');
     const newSkillForm = document.getElementById('skill-form');
