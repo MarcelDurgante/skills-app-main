@@ -151,4 +151,6 @@ Once we step over, we can actually see we end up inside this if statement. So th
 
 Inside this if statement, the logic is a problem. And indeed it is because we're saying if the user or user is admin. So user is going to make it a truthy object because it's not undefined or null or something. There's actually a user object in there set to true. So, true or false comes down to true, and that's a problem. Those should be ampersands and not the pipes.
 
+Upon correction we move back to the browser and render the page again. As you can see, again, we get stuck on this endpoint. But this time, we actually don't get into the if statement, and the admin page is not showing up in the navbar.
+
 */
