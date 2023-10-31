@@ -56,3 +56,8 @@
         * Elements panel to see event listeners
         * Sources panel as backup plan
         * Fix the code
+
+***
+> Resources:
+
+>> [Compatibility](https://caniuse.com/)
