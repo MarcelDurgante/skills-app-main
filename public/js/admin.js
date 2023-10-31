@@ -41,18 +41,7 @@ function populateUserList(userSelect) {
     })
         .then((response) => response.json())
         .then((data) => {
-            // intentional typo to demonstrate reference error 
-
-            /* output: 
-            
-            admin.js:61 Error: ReferenceError: usersLit is not defined
-            at admin.js:45:13
-
-            "In Admin Panel/Skills Management/Select User:" is not been populated again.
-            
-            */
-
-            usersList.innerHTML = ""; // Error fixed. The list populates again.
+            usersList.innerHTML = "";
             userSelect.innerHTML = "";
 
             data.users.forEach((user) => {
