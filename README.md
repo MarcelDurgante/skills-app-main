@@ -50,3 +50,9 @@
  - Approach for solving
     * Setting breakpoints in the Sources panel of Chrome DevTools
     * And then, inspecting the code's flow and state at each step
+
+ - Clicking a button that doesn't work
+    * Approach to solving
+        * Elements panel to see event listeners
+        * Sources panel as backup plan
+        * Fix the code
