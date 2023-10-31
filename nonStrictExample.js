@@ -1,12 +1,12 @@
 "use strict";
 
 function calculateTotal(price, quantity) {
-    total = price * quantity;
+    let total = price * quantity;
     return total;
 }
 
 let result = calculateTotal(10, 3);
-console.log(total); // total instead of result
+console.log(result); // total instead of result
 
 /* Here we see an example of where we're not using strict mode. 
 
@@ -17,7 +17,7 @@ Since we're not using strict mode, this will actually work. As you can see, it p
 But let's say that we were calling this function again, and then we store a different value in total. Then the console is going to print something fully different so that's definitely a problem that we want to see. Otherwise, we get some sort of logical error that we don't get instead of a reference error that we would want to get. So as you can see, when we enable strict mode, you see that it says total is not defined on line 3. 
 */
 calculateTotal(5, 3);
-console.log(total);
+console.log(result);
 
 /* output: 
 
