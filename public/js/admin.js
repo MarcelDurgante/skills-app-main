@@ -52,7 +52,7 @@ function populateUserList(userSelect) {
             
             */
 
-            usersLit.innerHTML = "";
+            usersList.innerHTML = ""; // Error fixed. The list populates again.
             userSelect.innerHTML = "";
 
             data.users.forEach((user) => {
