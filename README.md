@@ -78,6 +78,21 @@
             * Suspecting a memory leak or inefficient function
             * We'll use the performance and memory panels for debugging
 
+### Page Loading and Timing Issues
+
+- Resource‑heavy applications where loading large files like images or videos can cause significant slowdowns 
+    * (we could opt to compress the image or if we need it in its size, we could load it asynchronously to enhance the page load speed)
+- Server delays, or inefficient load order
+- Network panel can be used to inspect
+    > We can use the Network tab to inspect the load times of different resources
+
+    * Scenario: Sudden increase of the loading time
+        * Aproach to solving
+            * Network panel
+            * Reproduce the problem
+            * Disable cache
+            * See the network requests 
+            * Identify and fix the problems
 
 ***
 > Resources:
