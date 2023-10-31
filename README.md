@@ -27,9 +27,9 @@
 
  - Reference and type errors 
    * Reference errors
-    * Using an identifier that has not  been defined
+        * Using an identifier that has not  been defined
    * Type errors 
-    * Performing an operation that is not available on a certain type. When we misuse a data type.
+        * Performing an operation that is not available on a certain type. When we misuse a data type.
  - Logical problems
  - Undefined behaviour
  - Browser compatibility
@@ -42,5 +42,5 @@
  ### Fixing a reference and a type error
 
  - Approach for solving
-  * Checking the console
-  * Solving the problem
+    * Checking the console
+    * Solving the problem
