@@ -123,7 +123,8 @@ function renderSkillListPage() {
 function updateNavbar() {
   const user = JSON.parse(localStorage.getItem("currentUser"));
   const navbar = document.getElementById("navbar");
-
+// intentional error || instead of &&
+// See summary of the error below
   if (user && user.isAdmin) {
     const adminLink = document.createElement("a");
     adminLink.href = "admin.html"; // Set the correct link to your admin page
@@ -131,3 +132,23 @@ function updateNavbar() {
     navbar.appendChild(adminLink);
   }
 }
+
+// Summary of the error:
+
+/* output: 
+
+We're going to log in as a regular user so we don't have any admin rights. But we see a problem occur. The admin page is showing up in the navbar. And even worse, I can even navigate there. As you can see, in our console, there's no error showing up. 
+
+So instead, we're going to move to our Sources tab. What you can also see is the admin page is not visible here. So I'm going to go back to My Skills, and this is where the admin page is visible. I'm going to be opening up the JavaScript, and I'm going to set a breakpoint at the function that should be showing or hiding the element in the navbar.  
+
+So, let's refresh this page and see if we even get stuck on this line, and we do. So we can now go ahead and inspect what's going on. So we have our local scope right here, and I'm going to step over to the next line. As you can see, in the user, it now stored our values. So let's go ahead and see what's going on inside the user. And as you can see, isAdmin is set to false. Clearly, normally, you would not have your password right here, but this just returned the full user object and we stored it in our local storage for demonstration purposes. But as you can see, isAdmin is false, so that's not a problem. 
+
+Okay, so let's go ahead and let's move to the next step. 
+
+We select the navbar. So this if statement should be false because in this if statement, we are appending the admin page. 
+
+Once we step over, we can actually see we end up inside this if statement. So this is where it's going wrong. 
+
+Inside this if statement, the logic is a problem. And indeed it is because we're saying if the user or user is admin. So user is going to make it a truthy object because it's not undefined or null or something. There's actually a user object in there set to true. So, true or false comes down to true, and that's a problem. Those should be ampersands and not the pipes.
+
+*/
