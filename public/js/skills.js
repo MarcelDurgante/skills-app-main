@@ -113,7 +113,7 @@ function renderSkillListPage() {
           // adding a delete button but "forgetting" event handler
           const deleteBtn = document.createElement("button");
           deleteBtn.innerHTML = "Delete";
-          // deleteBtn.addEventListener("click", deleteSkill);
+          deleteBtn.addEventListener("click", deleteSkill); // adding the event handler that was missing now the delete button works in the frontend (see explanation of this debugging in comment below - comments deleted after finishing the demo so look at previous commits)
           listItem.appendChild(deleteBtn);
           skillsList.appendChild(listItem);
         });
