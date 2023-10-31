@@ -125,7 +125,6 @@ function addSkill(userSelect) {
 
 }
 
-
 function logout(currentUser) {
     fetch("/api/user/logout", {
         method: "POST",
