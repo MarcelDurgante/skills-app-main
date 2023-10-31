@@ -39,7 +39,7 @@
  - Problems with UI events
  - Callbacks, promises, and async/await issues
 
- ### Fixing a type error
+ ### Fixing a reference and a type error
 
  - Approach for solving
   * Checking the console
