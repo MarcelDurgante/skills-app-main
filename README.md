@@ -95,13 +95,28 @@
             * See the network requests 
             * Identify and fix the problems
 
-### Failed requests
+### Failed Requests
 
 - Aproach to solving
     * Chech the console firts
     * Navigate to network panel
     * Inspect Failed requests
     * Fix the problem
+
+### Failed Imports
+
+> They often occur due to :
+    - Incorrect paths
+    - Not available or installed modules (nmp install) 
+    - Syntax errors in the imported modules   
+    
+
+  * Scenario: After importing a module, our application is broken
+      * Aproach to solving
+          * Check the console
+          * Check the import in our code
+          * See if the module is available
+          * Fix the problem
 
 ***
 > Resources:
