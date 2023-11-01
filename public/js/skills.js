@@ -58,6 +58,15 @@ function handlePage(currentUser) {
   }
 }
 
+// Create a named function for the event listener
+function handleSubmit(event, currentUser) {
+    event.preventDefault();
+    addSkill(currentUser);
+    // Intentional error call to the handlePage again, for refreshing purposes
+    // but accidentally assigning double event handlers
+    handlePage();
+}
+
 function addSkill() {
   const messageDiv = document.getElementById("message");
   const skillName = document.getElementById("skill-name").value;
