@@ -63,6 +63,7 @@
 - Inefficient code
 - Unnecessary computations
 - Memory leaks
+
     * Happens when our program holds onto memory that is no longer needed.
     * In JS it often happens because objects have a reachable reference, and the garbage collector cannot reclaim the memory.
         * Garbage Collector: 
@@ -93,6 +94,14 @@
             * Disable cache
             * See the network requests 
             * Identify and fix the problems
+
+### Failed requests
+
+- Aproach to solving
+    * Chech the console firts
+    * Navigate to network panel
+    * Inspect Failed requests
+    * Fix the problem
 
 ***
 > Resources:
