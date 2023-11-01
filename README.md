@@ -118,6 +118,14 @@
           * See if the module is available
           * Fix the problem
 
+### Problems with UI Events
+
+ * Scenario: Button is not working
+    * Aproach to solving
+        * Check the event listener in the Element panel
+        * Additionally, check the console and sources
+        * Identify the problem and solve it
+
 ***
 > Resources:
 
