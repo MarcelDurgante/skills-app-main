@@ -63,7 +63,8 @@ function handleSubmit(event, currentUser) {
   addSkill(currentUser);
   // Intentional error call to the handlePage again, for refreshing purposes
   // but accidentally assigning double event handlers
-  //   handlePage(); // error found
+  // handlePage(); // error found.  E were adding an event listener multiple times which was adding event listeners upon every add sill. Now it is not goint to double the event handlers connected to my form every time I submit it.
+  // ATENTION that we deleted  event.preventDefault(); and addSkill(currentUser); from the addSkillForm.addEventListener in the 'function handlePage()'.
 }
 
 function addSkill() {
