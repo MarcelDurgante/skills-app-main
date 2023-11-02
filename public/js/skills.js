@@ -54,9 +54,6 @@ function handlePage(currentUser) {
     addSkillForm.addEventListener("submit", (event) =>
       handleSubmit(event, currentUser)
     );
-    //   event.preventDefault();
-    //   addSkill(currentUser);
-    //});
   }
 }
 
@@ -66,7 +63,7 @@ function handleSubmit(event, currentUser) {
   addSkill(currentUser);
   // Intentional error call to the handlePage again, for refreshing purposes
   // but accidentally assigning double event handlers
-  handlePage();
+  //   handlePage(); // error found
 }
 
 function addSkill() {
