@@ -7,7 +7,6 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 // Path to new id file
 const newUserIdFile = path.join(__dirname, '../data/nextId.json');
 
-
 // Read users data from users.json
 function readUsersData() {
     const usersData = fs.readFileSync(usersFilePath);

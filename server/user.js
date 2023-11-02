@@ -3,7 +3,6 @@ const data = require('./data');
 
 const userRouter = express.Router();
 
-
 // User login
 userRouter.post('/login', function (req, res) {
     const { username, password } = req.body;
