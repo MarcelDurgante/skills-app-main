@@ -51,20 +51,22 @@ function handlePage(currentUser) {
   if (window.location.pathname.endsWith("skillForm.html")) {
     const addSkillForm = document.getElementById("add-skill-form");
 
-    addSkillForm.addEventListener("submit", (event) => {
-      event.preventDefault();
-      addSkill(currentUser);
-    });
+    addSkillForm.addEventListener("submit", (event) =>
+      handleSubmit(event, currentUser)
+    );
+    //   event.preventDefault();
+    //   addSkill(currentUser);
+    //});
   }
 }
 
 // Create a named function for the event listener
 function handleSubmit(event, currentUser) {
-    event.preventDefault();
-    addSkill(currentUser);
-    // Intentional error call to the handlePage again, for refreshing purposes
-    // but accidentally assigning double event handlers
-    handlePage();
+  event.preventDefault();
+  addSkill(currentUser);
+  // Intentional error call to the handlePage again, for refreshing purposes
+  // but accidentally assigning double event handlers
+  handlePage();
 }
 
 function addSkill() {
@@ -121,7 +123,7 @@ function renderSkillListPage() {
           listItem.id = skill;
           const deleteBtn = document.createElement("button");
           deleteBtn.innerHTML = "Delete";
-          deleteBtn.addEventListener("click", deleteSkill); 
+          deleteBtn.addEventListener("click", deleteSkill);
           listItem.appendChild(deleteBtn);
           skillsList.appendChild(listItem);
         });
@@ -146,7 +148,7 @@ function updateNavbar() {
 }
 
 function deleteSkill(e) {
-    const idToDelete = e.target.parentElement.id;
-    document.getElementById(idToDelete).remove();
-    // NOTE: not deleting it on the backend yet 
+  const idToDelete = e.target.parentElement.id;
+  document.getElementById(idToDelete).remove();
+  // NOTE: not deleting it on the backend yet
 }
