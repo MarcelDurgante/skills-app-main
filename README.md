@@ -166,6 +166,4 @@
 
 ***
 
-> Resources:
-
 [^1]: [Compatibility](https://caniuse.com/)
