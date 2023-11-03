@@ -126,6 +126,14 @@
         * Additionally, check the console and sources
         * Identify the problem and solve it
 
+### Debugging Callbacks, Promises and State
+
+ * Scenario: Button is not working
+    * Aproach to solving
+        * Check the event listener in the Element panel
+        * Additionally, check the console and sources
+        * Identify the problem and solve it
+
 ***
 > Resources:
 
