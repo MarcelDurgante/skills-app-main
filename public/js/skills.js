@@ -152,3 +152,23 @@ function deleteSkill(e) {
   document.getElementById(idToDelete).remove();
   // NOTE: not deleting it on the backend yet
 }
+
+/* DESCRIPTION: Solution summary: 
+
+I'm going to log in first, and I'm going to add a skill. And in the console it will print whether I added the skill or not. 
+
+So I'm going to add testing as one of my skills. And you can see, it says is the console of the inspector: 'Was the skill added? false'. However, if I navigate back to my skills, you can see it was added. So what's going on here? 
+
+Well, let's move to the Sources tab and put a breakpoint where I'm adding my skill. So I'm going to put a breakpoint here where I'm saying skillAdded is true. And I'm going to put a breakpoint here when I'm printing this message.
+
+Let's just add another skill, debugging. You can see the first thing it pauses at is at Was the skill added? And if I then continue, it then actually ends up in the skillAdded is true. 
+
+Why is this happening? Well, the then block is not executed before the line 93, even though the line number 93 comes after 84 where we said skill added to true. Why? Well, this is async. 
+
+So the first thing it's going to do is going to send out a post request. Then when that is done, it's going to execute the first then block, which returns a new promise. And when that is done, it's going to execute the second then block. Well, by then, it has already printed there was a skill added. 
+
+So outside of the then block, you cannot assume that the skill added was already set. 
+
+This is a very common problem. Also, when you try to get back an array to populate your page, always do so from within the then block because that's the place where you are sure that it has been set. Of course, you can split this up in functions and then call a function from the then block. It doesn't need to be a very bulky long then block. 
+
+*/
