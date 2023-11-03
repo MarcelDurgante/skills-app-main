@@ -128,10 +128,9 @@
 
 ### Debugging Callbacks, Promises and State
 
- * Scenario: Button is not working
+ * Scenario: Fetching skills and assume a value in .then block gets set
     * Aproach to solving
-        * Check the event listener in the Element panel
-        * Additionally, check the console and sources
+        * Check the panels
         * Identify the problem and solve it
 
 ***
