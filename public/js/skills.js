@@ -62,36 +62,36 @@ function handleSubmit(event, currentUser) {
   addSkill(currentUser);
 }
 
-function addSkill() {
+async function addSkill() {
   const messageDiv = document.getElementById("message");
   const skillName = document.getElementById("skill-name").value;
-  let skillAdded = false;
 
-  fetch("/api/user/skills", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ skill: skillName }),
-    credentials: "include",
-  })
-    .then((response) => {
-      if (!response.ok) { // if HTTP-status is 200-299
-        // get the error message from the body or default to response statusText
-        throw new Error(response.statusText);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      if (data.status === "success") {
-        messageDiv.textContent = "Skill added successfully!";
-      } else {
-        messageDiv.textContent = data.message;
-      }
-    })
-    .catch((error) => {
-      console.error("Error:", error);
+  try {
+    const response = fetch("/api/user/skills", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ skill: skillName }),
+      credentials: "include",
     });
+
+    // Bug: We forgot to await the fetch call. So response will be a Promise
+    if (!response.ok) {
+      // if HTTP-status is 200-299
+      // get the error message from the body or default to response statusText
+      throw new Error(response.statusText);
+    }
+
+    const data = response.json(); // Bug: response is still a promise
+    if (data.status === "success") {
+      messageDiv.textContent = "Skill added successfully!";
+    } else {
+      messageDiv.textContent = data.message;
+    }
+  } catch (error) {
+    console.error("Error:", error);
+  }
 }
 
 function renderSkillListPage() {
