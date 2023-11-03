@@ -32,7 +32,7 @@
         * Performing an operation that is not available on a certain type. When we misuse a data type.
  - Logical problems
  - Undefined behaviour
- - Browser compatibility
+ - Browser compatibility[^1]
  - Performance, page loading, and timing issues
  - Failed requests to the backend
  - Failed imports
