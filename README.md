@@ -150,10 +150,10 @@
 
 > Summary:
 
-> Many common bugs
-> Using Chrome DevTools for frontend
-> Using VS Code for backend and other scripts
-> Debugging happens throughout the entire software lifecycle
+>* Many common bugs
+>* Using Chrome DevTools for frontend
+>* Using VS Code for backend and other scripts
+>* Debugging happens throughout the entire software lifecycle
 
 ***
 
