@@ -148,12 +148,14 @@
 
 ***
 
-> Summary:
+<dl>
+  <dt>Summary:</dt>
 
->* Many common bugs
->* Using Chrome DevTools for frontend
->* Using VS Code for backend and other scripts
->* Debugging happens throughout the entire software lifecycle
+  <dd>Many common bugs.</dd>
+  <dd>Using Chrome DevTools for frontend.</dd>
+  <dd>Using VS Code for backend and other scripts.</dd>
+  <dd>Debugging happens throughout the entire software lifecycle.</dd>
+</dl>
 
 ***
 
@@ -163,6 +165,7 @@
 - Best practices for debugging
 
 ***
+
 > Resources:
 
->> [Compatibility](https://caniuse.com/)
+[^1]: [Compatibility](https://caniuse.com/)
