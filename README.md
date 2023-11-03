@@ -146,11 +146,21 @@
         * Use the sources panel and set breackpoints
             * Once the breakpoints are set, we're going to reload, and it will pause the execution at those breakpoints. That allows us to step through, and we can inspect our variables and, in this way, identify and solve the problem
 
+***
+
 > Summary:
-    >> Many common bugs
-    >> Using Chrome DevTools for frontend
-    >> Using VS Code for backend and other scripts
-    >> Debugging happens throughout the entire software lifecycle
+
+> Many common bugs
+> Using Chrome DevTools for frontend
+> Using VS Code for backend and other scripts
+> Debugging happens throughout the entire software lifecycle
+
+***
+
+## Final Points:
+
+- VS Code and Chrome DevTools comparison
+- Best practices for debugging
 
 ***
 > Resources:
