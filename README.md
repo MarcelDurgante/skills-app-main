@@ -1,4 +1,7 @@
 # [Debugging JavsScript Applications](https://app.pluralsight.com/library/courses/javascript-debugging-applications/table-of-contents)
+*by [Maaike van Putten](https://nl.linkedin.com/in/maaikevanputten)*
+
+> [Certificate](https://app.pluralsight.com/achievements/share/8a2fd209-acc1-4254-b27e-717eed838b2c).
 
 ## Debugging the backend
 
