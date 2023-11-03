@@ -133,6 +133,19 @@
         * Check the panels
         * Identify the problem and solve it
 
+### Debugging Async/Await issues
+
+- Common Issues
+    - Unhandled rejections
+    - Unresolved promises
+    - Problems with the sync code surrounding the async/await 
+
+ * Scenario: Skills are not loading as they should
+    * Aproach to solving
+        * Check the console panel
+        * Use the sources panel and set breackpoints
+            * Once the breakpoints are set, we're going to reload, and it will pause the execution at those breakpoints. That allows us to step through, and we can inspect our variables and, in this way, identify and solve the problem
+
 ***
 > Resources:
 
