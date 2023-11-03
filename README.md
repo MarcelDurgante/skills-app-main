@@ -150,7 +150,7 @@
 
 <dl>
   <dt>Summary:</dt>
-
+<br>
   <dd>Many common bugs.</dd>
   <dd>Using Chrome DevTools for frontend.</dd>
   <dd>Using VS Code for backend and other scripts.</dd>
